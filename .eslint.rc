@@ -1,0 +1,48 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    // Restrict file extensions that may be required
+    "react/require-extension": "off",
+
+    // Prevent missing parentheses around multilines JSX
+    "react/jsx-wrap-multilines": "off",
+
+    // only .jsx files may have JSX
+    "react/jsx-filename-extension": "off",
+
+    // Prevent missing displayName in a React component definition
+    "react/display-name": ["error", {
+      "ignoreTranspilerName": false
+    }],
+
+    // enforce newline at the end of file, with no multiple empty lines
+    "eol-last": "off",
+
+    // specify the maximum length of a line in your program
+    "max-len": "off",
+
+    //
+    "jsx-a11y/label-has-for": "off",
+
+    // disallow usage of expressions in statement position
+    "no-unused-expressions": "off",
+
+    // disallow reassignment of function parameters
+    // disallow parameter object manipulation
+    "no-param-reassign": ["error", {
+      "props": false
+    }],
+
+    // ensure imports point to files/modules that can be resolved
+    "import/no-unresolved": [2, {
+      "ignore": [".\/styles$"]
+    }]
+  },
+  "globals": {
+    // Google Analytics
+    "ga": true
+  }
+}
