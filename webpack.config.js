@@ -1,14 +1,21 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    'app': [
+      'react-hot-loader/patch',
+      './src/index.js',
+    ],
+  },
 
   plugins: [
     new HtmlWebpackPlugin({
       title: 'React Atomic Design',
       template: path.resolve(__dirname, 'src', 'index.html'),
-    })
+    }),
+    new webpack.HotModuleReplacementPlugin(),
   ],
 
   output: {
@@ -33,11 +40,12 @@ module.exports = {
             ['env', {
               'targets': {
                 'browsers': ['last 2 versions', 'safari >= 7']
-              }
+              },
+              'modules': false,
             }],
             'react',
           ],
-          plugins: ['transform-object-rest-spread'],
+          plugins: ['transform-object-rest-spread', 'react-hot-loader/babel'],
         },
       },
     ],
@@ -52,7 +60,7 @@ module.exports = {
   //   extensions: ['.js', '.json', '.jsx', '.css'],
   // },
 
-  devtool: 'source-map',
+  devtool: 'eval',//'source-map',
 
   // context: __dirname,
 
@@ -62,6 +70,6 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist'),
     // compress: true, // enable gzip compression
     // historyApiFallback: true, // true for index.html upon 404, object for multiple paths
-    // hot: true, // hot module replacement. Depends on HotModuleReplacementPlugin
+    hot: true, // hot module replacement. Depends on HotModuleReplacementPlugin
   },
 };

@@ -1,5 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { AppContainer } from 'react-hot-loader'
+
+import { Test } from './Test.jsx';
+
 
 const x = {
   a: 1,
@@ -27,13 +31,20 @@ const f = (
 f(1,2,3);
 
 f('this', 'is', 'sparta');
+const render = Component => {
+  ReactDOM.render(
+    <AppContainer>
+      <Component />
+    </AppContainer>,
+    document.getElementById('root')
+  );
+};
 
-const Test = () => <div>lasers</div>;
+// Hot Module Replacement API
 
-console.log(Test);
+if (module.hot) {
+  module.hot.accept('./Test.jsx', () => { render(Test) })
+}
 
 
-ReactDOM.render(
-  <Test />,
-  document.getElementById('root')
-);
+render(Test);
