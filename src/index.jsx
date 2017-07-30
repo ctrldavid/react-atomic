@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { AppContainer } from 'react-hot-loader'
+import { AppContainer } from 'react-hot-loader';
 
 import { Test } from './Test.jsx';
 
@@ -16,6 +16,7 @@ const y = {
 };
 
 console.log({...x, ...y});
+
 
 console.log('hi');
 
@@ -43,7 +44,7 @@ const render = Component => {
 // Hot Module Replacement API
 
 if (module.hot) {
-  module.hot.accept('./Test.jsx', () => { render(Test) })
+  module.hot.accept('./Test.jsx', () => { render(Test); });
 }
 
 

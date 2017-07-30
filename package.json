@@ -4,7 +4,8 @@
   "description": "A react app for experimenting with atomic design",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "eslint": "eslint ./src"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,8 @@
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "eslint": "^4.3.0",
+    "eslint-plugin-react": "^7.1.0",
     "html-webpack-plugin": "^2.29.0",
     "webpack": "^3.4.1",
     "webpack-dev-server": "^2.6.1"
