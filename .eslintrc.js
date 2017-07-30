@@ -1,6 +1,9 @@
 module.exports = {
   "env": {
     "browser": true,
+    // webpack apparently spits out commonjs, The hot module reloader expects
+    // a global `module` which throws errors unless we include this in the env.
+    "commonjs": true,
     "es6": true
   },
   "extends": ["eslint:recommended", "plugin:react/recommended"],
