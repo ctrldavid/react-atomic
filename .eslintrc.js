@@ -3,12 +3,13 @@ module.exports = {
     "browser": true,
     "es6": true
   },
-  "extends": "eslint:recommended",
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
   "parserOptions": {
     "ecmaVersion": 2017,
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
-      "jsx": true
+      "jsx": true,
+      "impliedStrict": true,
     },
     "sourceType": "module"
   },
@@ -16,6 +17,9 @@ module.exports = {
     "react"
   ],
   "rules": {
+    "no-console": [
+      "warn",
+    ],
     "indent": [
       "error",
       2
