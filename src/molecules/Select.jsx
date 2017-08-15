@@ -2,6 +2,8 @@ import React, {Component, Children} from 'react';
 import css from './Select.css';
 import { SelectedBehaviour } from '../atoms/SelectedBehaviour.jsx';
 
+// This should probably be an organism.
+
 export class Select extends Component {
   constructor (props) {
     super(props);
