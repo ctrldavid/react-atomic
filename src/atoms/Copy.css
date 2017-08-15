@@ -1,0 +1,5 @@
+.default {
+  color: var(--colour1);
+  background-color: var(--background-colour);
+  margin: 0px;
+}

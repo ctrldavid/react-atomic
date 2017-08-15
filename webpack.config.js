@@ -1,3 +1,4 @@
+/* global __dirname */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
@@ -39,7 +40,7 @@ module.exports = {
           presets: [
             ['env', {
               'targets': {
-                'browsers': ['last 2 versions', 'safari >= 7']
+                'browsers': ['last 2 versions', 'safari >= 7'],
               },
               'modules': false,
             }],
@@ -47,6 +48,16 @@ module.exports = {
           ],
           plugins: ['transform-object-rest-spread', 'react-hot-loader/babel'],
         },
+      },
+      {
+        test: /\.css$/,
+        use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+            options: { modules: true },
+          },
+        ],
       },
     ],
   },

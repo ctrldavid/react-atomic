@@ -1,0 +1,10 @@
+.select {
+  border: solid 1px black;
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+
+.option {
+  padding: 1rem;
+  background-color: var(--background-colour);
+}
