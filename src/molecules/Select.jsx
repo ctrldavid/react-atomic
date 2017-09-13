@@ -34,9 +34,9 @@ export class Select extends Component {
       if (!this.state.includeSelected && idx == this.state.selected) {
         return null;
       }
-      return React.cloneElement(component, {
-        onClick: () => {this.select(idx);},
-      });
+      return <Option onClick={() => this.select(idx)}>
+        {component}
+      </Option>;
     });
 
 
