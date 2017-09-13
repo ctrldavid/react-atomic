@@ -4,7 +4,7 @@
   "description": "A react app for experimenting with atomic design",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "start": "webpack-dev-server --open",
+    "start": "webpack-dev-server",
     "eslint": "eslint --ext .js,.jsx ./src"
   },
   "repository": {
@@ -28,7 +28,11 @@
     "eslint": "^4.3.0",
     "eslint-plugin-react": "^7.1.0",
     "html-webpack-plugin": "^2.29.0",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^10.0.0",
+    "postcss-loader": "^2.0.6",
     "style-loader": "^0.18.2",
+    "sugarss": "^1.0.0",
     "webpack": "^3.4.1",
     "webpack-dev-server": "^2.6.1"
   },

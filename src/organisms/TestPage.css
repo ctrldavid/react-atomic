@@ -3,3 +3,6 @@
   --background-colour: white;
 }
 
+:fullscreen a {
+    display: flex
+}

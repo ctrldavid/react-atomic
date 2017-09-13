@@ -57,6 +57,7 @@ module.exports = {
             loader: 'css-loader',
             options: { modules: true },
           },
+          { loader: 'postcss-loader' },
         ],
       },
     ],
@@ -80,7 +81,7 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     // compress: true, // enable gzip compression
-    // historyApiFallback: true, // true for index.html upon 404, object for multiple paths
+    historyApiFallback: true, // true for index.html upon 404, object for multiple paths
     hot: true, // hot module replacement. Depends on HotModuleReplacementPlugin
   },
 };

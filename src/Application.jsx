@@ -4,7 +4,7 @@ import { Heading } from './atoms/Heading.jsx';
 
 export const Application = () => (
   <div>
-    <Heading text='outer' />
+    <Heading text='Application level heading' />
     <TestPage />
   </div>
 );

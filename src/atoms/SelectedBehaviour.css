@@ -1,4 +1,10 @@
 .selectedBehaviour {
   --colour1: white;
-  --background-colour: green;
+  --background-colour: color(green hue(+0));
+  transition: color 3s;
+}
+
+.selectedBehaviour:hover {
+  --colour1: red;
+  --background-colour: color(green hue(+150));
 }
